@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Restaurant.Data;
+using Restaurant.Infrastructure.Data;
 
 namespace Restaurant.Extensions
 {

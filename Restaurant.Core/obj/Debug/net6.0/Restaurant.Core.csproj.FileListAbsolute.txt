@@ -1,0 +1,15 @@
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.csproj.AssemblyReference.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.AssemblyInfoInputs.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.AssemblyInfo.cs
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.csproj.CoreCompileInputs.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\bin\Debug\net6.0\Restaurant.Core.deps.json
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\bin\Debug\net6.0\Restaurant.Core.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\bin\Debug\net6.0\Restaurant.Core.pdb
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\bin\Debug\net6.0\Restaurant.Infrastructure.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\bin\Debug\net6.0\Restaurant.Infrastructure.pdb
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.csproj.CopyComplete
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\refint\Restaurant.Core.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\Restaurant.Core.pdb
+C:\Users\Nutzer\Desktop\Test\Restaurant.Core\obj\Debug\net6.0\ref\Restaurant.Core.dll

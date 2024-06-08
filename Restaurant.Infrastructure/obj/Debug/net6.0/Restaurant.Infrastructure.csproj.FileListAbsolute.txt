@@ -1,0 +1,12 @@
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.AssemblyInfo.cs
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\bin\Debug\net6.0\Restaurant.Infrastructure.deps.json
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\bin\Debug\net6.0\Restaurant.Infrastructure.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\bin\Debug\net6.0\Restaurant.Infrastructure.pdb
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\refint\Restaurant.Infrastructure.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\Restaurant.Infrastructure.pdb
+C:\Users\Nutzer\Desktop\Test\Restaurant.Infrastructure\obj\Debug\net6.0\ref\Restaurant.Infrastructure.dll

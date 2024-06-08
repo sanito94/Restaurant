@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurant.Data;
 using System;
 
-namespace Restaurant.Data.Migrations
+namespace Restaurant.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
