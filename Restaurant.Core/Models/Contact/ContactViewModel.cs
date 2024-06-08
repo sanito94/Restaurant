@@ -24,6 +24,7 @@ namespace Restaurant.Core.Models.Contact
             SenderEmailMaxLength,
             MinimumLength = SenderEmailMinLength,
             ErrorMessage = LengthMessage)]
+        [EmailAddress]
         public string SenderEmail { get; set; } = null!;
 
         [Required(ErrorMessage = RequiredMessage)]

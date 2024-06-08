@@ -69,7 +69,7 @@ namespace Restaurant.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return RedirectToAction("ContactFormError", "Error");
             }
 
             Contact sender = new Contact()

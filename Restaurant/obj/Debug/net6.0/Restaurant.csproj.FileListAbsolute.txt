@@ -155,3 +155,4 @@ C:\Users\Nutzer\Desktop\Test\Restaurant\obj\Debug\net6.0\scopedcss\projectbundle
 C:\Users\Nutzer\Desktop\Test\Restaurant\obj\Debug\net6.0\Restaurant.csproj.CopyComplete
 C:\Users\Nutzer\Desktop\Test\Restaurant\obj\Debug\net6.0\Restaurant.genruntimeconfig.cache
 C:\Users\Nutzer\Desktop\Test\Restaurant\obj\Debug\net6.0\ref\Restaurant.dll
+C:\Users\Nutzer\Desktop\Test\Restaurant\obj\Debug\net6.0\Restaurant.MvcApplicationPartsAssemblyInfo.cs

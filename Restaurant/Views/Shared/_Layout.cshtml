@@ -51,14 +51,14 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a asp-action="Index" class="">Home<br></a></li>
-                    <li><a asp-action="About">About</a></li>
-                    <li><a asp-action="Menu">Menu</a></li>
-                    <li><a asp-action="Event">Events</a></li>
-                    <li><a asp-action="Chef">Chefs</a></li>
-                    <li><a asp-action="Gallery">Gallery</a></li>
-                    <li><a asp-action="Contact">Contact</a></li>
-                    <li><a class="btn-getstarted" asp-action="BookTable">Book a Table</a></li>
+                    <li><a asp-action="Index" asp-controller="Home" class="">Home<br></a></li>
+                    <li><a asp-action="About" asp-controller="Home">About</a></li>
+                    <li><a asp-action="Menu" asp-controller="Home">Menu</a></li>
+                    <li><a asp-action="Event" asp-controller="Home">Events</a></li>
+                    <li><a asp-action="Chef" asp-controller="Home">Chefs</a></li>
+                    <li><a asp-action="Gallery" asp-controller="Home">Gallery</a></li>
+                    <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                    <li><a class="btn-getstarted" asp-action="BookTable" asp-controller="Home">Book a Table</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
