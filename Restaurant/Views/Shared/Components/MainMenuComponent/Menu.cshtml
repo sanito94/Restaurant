@@ -1,4 +1,12 @@
-﻿<nav id="navmenu" class="navmenu">
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+
+</ul>
+
+<nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a asp-action="Index" asp-controller="Home" class="">Home<br></a></li>
                     <li><a asp-action="About" asp-controller="Home">About</a></li>
@@ -7,8 +15,23 @@
                     <li><a asp-action="Chef" asp-controller="Home">Chefs</a></li>
                     <li><a asp-action="Gallery" asp-controller="Home">Gallery</a></li>
                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
-                    <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-                    <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                     @if (SignInManager.IsSignedIn(User))
+                     {
+                     <li>
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                     </li>
+                     <li>
+                        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                            <button type="submit" >Logout</button>
+                        </form>
+                     </li>
+                     }
+                     else
+                     {
+                         <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                         <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                     }
+                    
                     <li><a class="btn-getstarted" asp-action="BookTable" asp-controller="Home">Book a Table</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

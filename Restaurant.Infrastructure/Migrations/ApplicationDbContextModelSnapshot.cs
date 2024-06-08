@@ -17,7 +17,7 @@ namespace Restaurant.Infrastructure.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.26")
+                .HasAnnotation("ProductVersion", "6.0.29")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -349,24 +349,23 @@ namespace Restaurant.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5321f824-d6f9-4a58-beef-03b7bc3d6fa4",
+                            Id = "e43ce836-997d-4927-ac59-74e8c41bbfd3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3f1fcaa1-ec8f-4b5c-86c5-2befec2a0b37",
+                            ConcurrencyStamp = "12d5948d-2d12-4776-83f9-4a839104349f",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@MAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPoOnkP+yBlDXObOEImqh2r9EznlO4zrFqTjavKiWRm8FAJQDOgMC/2wsOtoDYQSOw==",
-                            PhoneNumber = "+491787181664",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMlv2nHU0JZdoeXzlBSPyOC0SKpsKNDfARL7endvegicFTg2JClxrMwnGb0/J997Uw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a4958b3e-9970-40ac-a082-2f2b2f6a6f5f",
+                            SecurityStamp = "1f59c159-8f5e-4798-9ddf-112705db49d8",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com",
-                            Address = "ul. Pliska 4, bl. Preslav, grad Ruse",
+                            Address = "",
                             FirstName = "Great",
                             LastName = "Admin",
-                            PostalCode = "7000"
+                            PostalCode = ""
                         });
                 });
 

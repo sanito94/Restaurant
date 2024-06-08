@@ -34,5 +34,21 @@ namespace Restaurant.Infrastructure.Constants
 
         public const int PhoneNumberMaxLength = 250;
         public const int PhoneNumberMinLength = 9;
+
+
+        public const int UserFirstNameMaxLength = 12;
+        public const int UserFirstNameMinLength = 1;
+
+        public const int UserLastNameMaxLength = 15;
+        public const int UserLastNameMinLength = 3;
+
+        public const int UserAddressMaxLength = 50;
+        public const int UserAddressMinLength = 10;
+
+        public const int UserPostalCodeMaxLength = 10;
+        public const int UserPostalCodeMinLength = 3;
+
+        public const int UserPhoneNumberMaxLength = 15;
+        public const int UserPhoneNumberMinLength = 8;
     }
 }

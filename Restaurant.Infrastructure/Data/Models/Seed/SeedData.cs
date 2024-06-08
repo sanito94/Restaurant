@@ -22,16 +22,13 @@ namespace Restaurant.Infrastructure.Data.Models.Seed
 
             AdminUser = new ApplicationUser()
             {
-                Id = "5321f824-d6f9-4a58-beef-03b7bc3d6fa4",
+                Id = "e43ce836-997d-4927-ac59-74e8c41bbfd3",
                 UserName = "admin@gmail.com",
                 NormalizedUserName = "ADMIN@GMAIL.COM",
                 Email = "admin@gmail.com",
                 NormalizedEmail = "ADMIN@MAIL.COM",
                 FirstName = "Great",
-                LastName = "Admin",
-                Address = "ul. Pliska 4, bl. Preslav, grad Ruse",
-                PostalCode = "7000",
-                PhoneNumber = "+491787181664"
+                LastName = "Admin"
             };
 
             AdminUser.PasswordHash =

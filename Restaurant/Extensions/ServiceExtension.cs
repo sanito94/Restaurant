@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.Infrastructure.Data;
+using Restaurant.Infrastructure.Data.Models;
 
 namespace Restaurant.Extensions
 {
@@ -24,7 +25,7 @@ namespace Restaurant.Extensions
 
         public static IServiceCollection AddAppIdentity(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDefaultIdentity<IdentityUser>(options =>
+            services.AddDefaultIdentity<ApplicationUser>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireNonAlphanumeric = false;
@@ -32,6 +33,7 @@ namespace Restaurant.Extensions
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
             })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<RestaurantDbContext>();
             
 
