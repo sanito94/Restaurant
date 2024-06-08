@@ -1,4 +1,5 @@
-﻿<!-- Contact Section -->
+﻿@model ContactViewModel
+<!-- Contact Section -->
 <section id="contact" class="contact section">
 
     <!-- Section Title -->
@@ -53,31 +54,42 @@
             </div><!-- End Info Item -->
 
         </div>
+        <p></p>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form asp-action="Contact" asp-controller="Home" method="post">
             <div class="row gy-4">
 
                 <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <label asp-for="@Model.SenderName" class="form-label-add-edit">Your Name:</label>
+                    <input asp-for="@Model.SenderName" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.SenderName" class="text-danger"></span>
                 </div>
 
                 <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <label asp-for="@Model.SenderEmail" class="form-label-add-edit">Your Email:</label>
+                    <input asp-for="@Model.SenderEmail" class="form-control" aria-required="true" />
+                    <h1 asp-validation-for="@Model.SenderEmail" class="text-danger"></h1>
                 </div>
 
                 <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <label asp-for="@Model.PhoneNumber" class="form-label-add-edit">Your Phone Number:</label>
+                    <input asp-for="@Model.PhoneNumber" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span>
                 </div>
 
                 <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <label asp-for="@Model.Subject" class="form-label-add-edit">Subject:</label>
+                    <input asp-for="@Model.Subject" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.Subject" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-12">
+                    <label asp-for="@Model.Message" class="form-label-add-edit">Message:</label>
+                    <textarea asp-for="@Model.Message" class="form-control" aria-required="true"></textarea>
+                    <span asp-validation-for="@Model.Message" class="text-danger"></span>
                 </div>
 
                 <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
                     <button type="submit">Send Message</button>
                 </div>
 
