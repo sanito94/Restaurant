@@ -49,19 +49,7 @@
                 <span>.</span>
             </a>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a asp-action="Index" asp-controller="Home" class="">Home<br></a></li>
-                    <li><a asp-action="About" asp-controller="Home">About</a></li>
-                    <li><a asp-action="Menu" asp-controller="Home">Menu</a></li>
-                    <li><a asp-action="Event" asp-controller="Home">Events</a></li>
-                    <li><a asp-action="Chef" asp-controller="Home">Chefs</a></li>
-                    <li><a asp-action="Gallery" asp-controller="Home">Gallery</a></li>
-                    <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
-                    <li><a class="btn-getstarted" asp-action="BookTable" asp-controller="Home">Book a Table</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
+            @await Component.InvokeAsync(nameof(MainMenuComponent))
 
         </div>
     </header>
@@ -142,6 +130,8 @@
 
     <!-- Main JS File -->
     <script src="~/assets/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
 
 </body>
 

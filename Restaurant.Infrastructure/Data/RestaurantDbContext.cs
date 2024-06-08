@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.Infrastructure.Data.Models;
+using Restaurant.Infrastructure.Data.Models.Seed;
 
 namespace Restaurant.Infrastructure.Data
 {
@@ -9,6 +10,14 @@ namespace Restaurant.Infrastructure.Data
         public RestaurantDbContext(DbContextOptions<RestaurantDbContext> options)
             : base(options)
         {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfiguration(new UserConfiguration());
+
+            base.OnModelCreating(builder);
         }
 
         public DbSet<Item> Items { get; set; } = null!;

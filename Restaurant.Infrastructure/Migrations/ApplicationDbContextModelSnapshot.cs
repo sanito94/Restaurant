@@ -86,6 +86,10 @@ namespace Restaurant.Infrastructure.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -137,6 +141,8 @@ namespace Restaurant.Infrastructure.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -316,6 +322,52 @@ namespace Restaurant.Infrastructure.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("Restaurant.Infrastructure.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "5321f824-d6f9-4a58-beef-03b7bc3d6fa4",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "3f1fcaa1-ec8f-4b5c-86c5-2befec2a0b37",
+                            Email = "admin@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@MAIL.COM",
+                            NormalizedUserName = "ADMIN@GMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPoOnkP+yBlDXObOEImqh2r9EznlO4zrFqTjavKiWRm8FAJQDOgMC/2wsOtoDYQSOw==",
+                            PhoneNumber = "+491787181664",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "a4958b3e-9970-40ac-a082-2f2b2f6a6f5f",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@gmail.com",
+                            Address = "ul. Pliska 4, bl. Preslav, grad Ruse",
+                            FirstName = "Great",
+                            LastName = "Admin",
+                            PostalCode = "7000"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
