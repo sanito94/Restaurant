@@ -10,9 +10,4 @@
     <ProjectReference Include="..\Restaurant.Infrastructure\Restaurant.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

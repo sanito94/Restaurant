@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Restaurant.Core.Contracts;
+using Restaurant.Core.Services;
 using Restaurant.Infrastructure.Data;
 using Restaurant.Infrastructure.Data.Models;
 
@@ -9,6 +11,7 @@ namespace Restaurant.Extensions
     {
         public static IServiceCollection AddAppService(this IServiceCollection services)
         {
+            services.AddScoped<IAdminService, AdminService>();
 
             return services;
         }
