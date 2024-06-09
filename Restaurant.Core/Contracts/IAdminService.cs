@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurant.Core.Models.Admin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,11 @@ namespace Restaurant.Core.Contracts
     public interface IAdminService
     {
         Task AddCategoryAsync(string name);
-        Task<bool> ExistsByNameAsync(string name);
+        Task<bool> CategoryExistsByNameAsync(string name);
+        Task<IEnumerable<CategoryServiceModel>> AllCategoriesAsync();
+
+
+        Task AddItemAsync(ItemServiceModel model);
+        Task<bool> ItemExistsByNameAsync(string name);
     }
 }
