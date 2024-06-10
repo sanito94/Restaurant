@@ -12,6 +12,7 @@ namespace Restaurant.Extensions
         public static IServiceCollection AddAppService(this IServiceCollection services)
         {
             services.AddScoped<IAdminService, AdminService>();
+            services.AddScoped<IMenuService, MenuService>();
 
             return services;
         }

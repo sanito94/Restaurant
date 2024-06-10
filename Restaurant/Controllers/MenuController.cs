@@ -9,10 +9,15 @@ namespace Restaurant.Controllers
     {
 
         private readonly IAdminService adminService;
+        private readonly IMenuService menuService;
 
-        public MenuController(IAdminService _adminService)
+        public MenuController(
+            IAdminService _adminService,
+            IMenuService _menuService
+            )
         {
             adminService = _adminService;
+            menuService = _menuService;
         }
 
         public async Task<IActionResult> Menu(ShopQueryModel model)
@@ -26,9 +31,11 @@ namespace Restaurant.Controllers
             return View(model);
         }
 
-        public IActionResult Details()
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            var item = await menuService.ItemDetailsByIdAsync(id);
+
+            return View(item);
         }
     }
 }
