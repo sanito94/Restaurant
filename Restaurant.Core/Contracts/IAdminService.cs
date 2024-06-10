@@ -1,4 +1,5 @@
 ﻿using Restaurant.Core.Models.Admin;
+using Restaurant.Core.Models.Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,10 @@ namespace Restaurant.Core.Contracts
         Task AddCategoryAsync(string name);
         Task<bool> CategoryExistsByNameAsync(string name);
         Task<IEnumerable<CategoryServiceModel>> AllCategoriesAsync();
+        // Task<IEnumerable<string>> AllCategoriesNamesAsync();
 
 
+        Task<IEnumerable<ShopServiceModel>> AllItemsAsync();
         Task AddItemAsync(ItemServiceModel model);
         Task<bool> ItemExistsByNameAsync(string name);
     }

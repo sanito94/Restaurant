@@ -6,6 +6,9 @@ using System.Diagnostics;
 using System.Net.Mail;
 using System.Net;
 using Restaurant.Infrastructure.Data;
+using Restaurant.Core.Services;
+using Restaurant.Core.Models.Menu;
+using Restaurant.Core.Contracts;
 
 namespace Restaurant.Controllers
 {
@@ -13,13 +16,16 @@ namespace Restaurant.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly RestaurantDbContext context;
+        private readonly IAdminService adminService;
 
         public HomeController(
             ILogger<HomeController> logger,
-            RestaurantDbContext _context)
+            RestaurantDbContext _context,
+            IAdminService _adminService)
         {
             _logger = logger;
             context = _context;
+            adminService = _adminService;
         }
 
         public IActionResult Index()
@@ -27,9 +33,15 @@ namespace Restaurant.Controllers
             return View();
         }
 
-        public IActionResult Menu()
+        public async Task<IActionResult> Menu(ShopQueryModel model)
         {
-            return View();
+            var shopCategories = await adminService.AllCategoriesAsync();
+            var shopItems = await adminService.AllItemsAsync();
+
+            model.Category = shopCategories;
+            model.Items = shopItems;
+
+            return View(model);
         }
 
         public IActionResult About()

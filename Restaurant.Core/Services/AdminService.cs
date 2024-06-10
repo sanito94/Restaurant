@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Restaurant.Core.Contracts;
 using Restaurant.Core.Models.Admin;
+using Restaurant.Core.Models.Menu;
 using Restaurant.Infrastructure.Data;
 using Restaurant.Infrastructure.Data.Models;
 using System;
@@ -53,6 +54,31 @@ namespace Restaurant.Core.Services
                 })
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<ShopServiceModel>> AllItemsAsync()
+        {
+            return await context.Items
+                .AsNoTracking()
+                .Select(i => new ShopServiceModel()
+                {
+                    Id = i.Id,
+                    Name = i.Name,
+                    Description = i.Description,
+                    ImageUrl = i.ImageUrl,
+                    Price = i.Price,
+                    CategoryId = i.CategoryId,
+                })
+                .ToListAsync();
+        }
+
+        //public async Task<IEnumerable<string>> AllCategoriesNamesAsync()
+        //{
+        //    return await context.Categories
+        //        .AsNoTracking()
+        //        .Select(c => c.Name)
+        //        .Distinct()
+        //        .ToListAsync();
+        //}
 
         public async Task<bool> CategoryExistsByNameAsync(string name)
         {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurant.Core.Contracts;
 using Restaurant.Core.Models.Admin;
+using Restaurant.Core.Models.Menu;
 
 namespace Restaurant.Areas.Admin.Controllers
 {
@@ -13,9 +14,15 @@ namespace Restaurant.Areas.Admin.Controllers
             adminService = _adminService;
         }
 
-        public IActionResult Dashboard()
+        public async Task<IActionResult> Dashboard(ShopQueryModel model)
         {
-            return View();
+            var shopCategories = await adminService.AllCategoriesAsync();
+            var shopItems = await adminService.AllItemsAsync();
+
+            model.Category = shopCategories;
+            model.Items = shopItems;
+
+            return View(model);
         }
 
         public IActionResult AddCategory()

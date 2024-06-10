@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurant.Core.Models.Menu;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace Restaurant.Core.Models.Admin
         public ItemServiceModel()
         {
             Category = new List<CategoryServiceModel>();
+            Items = new List<ShopServiceModel>();
         }
 
         public int Id { get; set; }
@@ -20,5 +22,6 @@ namespace Restaurant.Core.Models.Admin
         public string ImageUrl { get; set; } = null!;
         public int CategoryId { get; set; }
         public IEnumerable<CategoryServiceModel> Category { get; set; }
+        public IEnumerable<ShopServiceModel> Items { get; set; }
     }
 }

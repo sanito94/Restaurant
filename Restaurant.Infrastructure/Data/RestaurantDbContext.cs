@@ -16,6 +16,7 @@ namespace Restaurant.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new CategoryConfiguration());
 
             base.OnModelCreating(builder);
         }

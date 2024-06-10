@@ -11,9 +11,15 @@ namespace Restaurant.Infrastructure.Data.Models.Seed
     {
         public ApplicationUser AdminUser { get; set; }
 
+        public Category Starters { get; set; }
+        public Category Breakfast { get; set; }
+        public Category Lunch { get; set; }
+        public Category Dinner { get; set; }
+
         public SeedData()
         {
             SeedUsers();
+            SeedStarters();
         }
 
         private void SeedUsers()
@@ -33,6 +39,33 @@ namespace Restaurant.Infrastructure.Data.Models.Seed
 
             AdminUser.PasswordHash =
             hasher.HashPassword(AdminUser, "admin");
+        }
+
+        private void SeedStarters()
+        {
+            Starters = new Category()
+            {
+                Id = 1,
+                Name = "Starters"
+            };
+
+            Breakfast = new Category()
+            {
+                Id = 2,
+                Name = "Breakfast"
+            };
+
+            Lunch = new Category()
+            {
+                Id = 3,
+                Name = "Lunch"
+            };
+
+            Dinner = new Category()
+            {
+                Id = 4,
+                Name = "Dinner"
+            };
         }
     }
 }
