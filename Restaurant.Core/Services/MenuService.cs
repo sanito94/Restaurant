@@ -24,9 +24,10 @@ namespace Restaurant.Core.Services
         {
             return await context.Items
                 .AsNoTracking()
+                .Where(x => x.Id == id)
                 .Select(i => new ShopDetailsServiceModel()
                 {
-                    Id = i.Id,
+                    Id = id,
                     Name = i.Name,
                     Description = i.Description,
                     ImageUrl = i.ImageUrl,
