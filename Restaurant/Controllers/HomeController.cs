@@ -16,16 +16,13 @@ namespace Restaurant.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly RestaurantDbContext context;
-        private readonly IAdminService adminService;
 
         public HomeController(
             ILogger<HomeController> logger,
-            RestaurantDbContext _context,
-            IAdminService _adminService)
+            RestaurantDbContext _context)
         {
             _logger = logger;
             context = _context;
-            adminService = _adminService;
         }
 
         public IActionResult Index()
@@ -33,16 +30,6 @@ namespace Restaurant.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Menu(ShopQueryModel model)
-        {
-            var shopCategories = await adminService.AllCategoriesAsync();
-            var shopItems = await adminService.AllItemsAsync();
-
-            model.Category = shopCategories;
-            model.Items = shopItems;
-
-            return View(model);
-        }
 
         public IActionResult About()
         {

@@ -100,12 +100,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Home/Menu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW51LmNzaHRtbA==
+[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Menu/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Menu/FirstItem.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxGaXJzdEl0ZW0uY3NodG1s
+[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Menu/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Shared/Components/MainMenuComponent/Menu.cshtml]
