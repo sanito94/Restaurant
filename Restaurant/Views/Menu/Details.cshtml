@@ -16,7 +16,13 @@
             </p>
             
             <p></p>
-            
+            @if (this.User?.Identity?.IsAuthenticated ?? false)
+            {
+                <form class="input-group-sm" asp-controller="Cart"
+                  asp-action="AddToCart" asp-route-id="@Model.Id" method="post">
+                                <input class="btn btn-primary" type="submit" value="AddToCart" />
+                            </form>
+            }
         </div>
     </div>
 </div>

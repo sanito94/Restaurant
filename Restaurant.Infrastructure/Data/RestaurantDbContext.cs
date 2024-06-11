@@ -26,5 +26,7 @@ namespace Restaurant.Infrastructure.Data
         public DbSet<Category> Categories { get; set; } = null!;
 
         public DbSet<Contact> Contacts { get; set; } = null!;
+
+        public DbSet<Cart> Carts { get; set; } = null!;
     }
 }

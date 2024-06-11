@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurant.Infrastructure.Data;
 
 #nullable disable
 
-namespace Restaurant.Infrastructure.Data.Migrations
+namespace Restaurant.Infrastructure.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240611053049_Cart")]
+    partial class Cart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -230,50 +232,6 @@ namespace Restaurant.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Restaurant.Infrastructure.Data.Models.Cart", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ItemName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<double>("SubTotal")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Carts");
-                });
-
             modelBuilder.Entity("Restaurant.Infrastructure.Data.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -417,15 +375,15 @@ namespace Restaurant.Infrastructure.Data.Migrations
                         {
                             Id = "e43ce836-997d-4927-ac59-74e8c41bbfd3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "62251867-0884-43fe-8652-2565b6a1f363",
+                            ConcurrencyStamp = "ad5e346f-1935-4966-8226-198bdff9ca25",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@MAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAnseW7ECelhG9PIEDVFbBK80kBD/LIou8+hM3VDTfBZWaIBGeM7+jJt1r857GMTBA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDPiBKirStEWk21XXrYeGfBOOdxe3nxhadio5h8xtvSEjEd8DWaGY1J5Z9AYKGR/Mw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "593bf1c6-ab18-4899-a26b-de7392d6a820",
+                            SecurityStamp = "c0c3a40b-2b71-4d21-bfb5-8777687c9dcf",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com",
                             Address = "",
@@ -484,25 +442,6 @@ namespace Restaurant.Infrastructure.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Restaurant.Infrastructure.Data.Models.Cart", b =>
-                {
-                    b.HasOne("Restaurant.Infrastructure.Data.Models.Item", "Item")
-                        .WithMany()
-                        .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Restaurant.Infrastructure.Data.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Item");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Restaurant.Infrastructure.Data.Models.Item", b =>

@@ -13,6 +13,7 @@ namespace Restaurant.Extensions
         {
             services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IMenuService, MenuService>();
+            services.AddScoped<ICartService, CartService>();
 
             return services;
         }
