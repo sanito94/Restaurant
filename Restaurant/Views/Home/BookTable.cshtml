@@ -3,6 +3,8 @@
     var nextYear = DateTime.Now.Year + 1;
     var month = DateTime.Now.Month.ToString().PadLeft(2, '0');
     var day = DateTime.Now.Day.ToString().PadLeft(2, '0');
+    var hour = DateTime.Now.Hour.ToString().PadLeft(2, '0');
+    var minute = DateTime.Now.Minute.ToString().PadLeft(2, '0');
     string empty = string.Empty;
 }
 <!-- Book A Table Section -->
@@ -33,7 +35,10 @@
                                     <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                            <input type="date" value="@year-@month-@day" min="@year-@month-@day" max="@nextYear-@month-@day" class="form-control" name="time" id="time" placeholder="Date" required="">
+                                    <input type="date" value="@year-@month-@day" min="@year-@month-@day" max="@nextYear-@month-@day" class="form-control" name="date" id="date" placeholder="Date" required="">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="time" value="@hour:@minute" class="form-control" name="time" id="time" placeholder="Time" required="">
                                 </div>
                                 <div class="col-lg-4 col-md-6">
                                     <input type="number" class="form-control" name="people" id="people" placeholder="Number of people" required="">
