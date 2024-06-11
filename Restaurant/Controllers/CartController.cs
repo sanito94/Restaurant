@@ -176,5 +176,21 @@ namespace Restaurant.Controllers
             await context.SaveChangesAsync();
             return RedirectToAction("All", "Cart");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            var shoppingCartItem = await context.Carts
+               .Where(c => c.UserId == User.Id() && c.ItemId == id)
+               .FirstOrDefaultAsync();
+
+            if (shoppingCartItem != null)
+            {
+                await cartService.DeleteAsync(shoppingCartItem.Id);
+            }
+
+            await context.SaveChangesAsync();
+            return RedirectToAction("All", "Cart");
+        }
     }
 }
