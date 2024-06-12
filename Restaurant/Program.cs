@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Restaurant.Infrastructure.Data;
 using Restaurant.Extensions;
 using Restaurant.Infrastructure.Data.Models;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddAppIdentity(builder.Configuration);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAppService();
+
+StripeConfiguration.ApiKey = "sk_test_51PQlKeDVV5j2uJJ8HdM6z9nAfPfCSsemobQmhbTwoRv0G8vrfK3gANyzHzq0tEkl3WwmkbN6vE6EEAnMLHaXxUqw00eMpp0ISf";
 
 var app = builder.Build();
 

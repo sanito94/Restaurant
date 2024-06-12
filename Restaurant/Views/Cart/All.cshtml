@@ -101,17 +101,17 @@
         <div class="card mb-4 mb-lg-0">
           <div class="card-body">
             <p><strong>We accept</strong></p>
-            <img class="me-2" width="45px"
-              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+            <img class="me-2"
+              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg" style="width:45px; height:45px"
               alt="Visa" />
-            <img class="me-2" width="45px"
-              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+            <img class="me-2" 
+              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg" style="width:45px; height:45px"
               alt="American Express" />
-            <img class="me-2" width="45px"
-              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+            <img class="me-2" 
+              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg" style="width:45px; height:45px"
               alt="Mastercard" />
-            <img class="me-2" width="45px"
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png"
+            <img class="me-2"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" style="width:45px; height:45px"
               alt="PayPal acceptance mark" />
           </div>
         </div>
@@ -143,10 +143,11 @@
                 <span><strong>$@subtotal.ToString("f2")</strong></span>
               </li>
             </ul>
-
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">
+                        <form asp-action="CreateCheckoutSession" asp-controller="Cart" method="post">
+            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">
               Go to checkout
             </button>
+            </form>
           </div>
         </div>
       </div>

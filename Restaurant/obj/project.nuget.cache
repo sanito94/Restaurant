@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5BOLPJtgz2BWUwSSL7es0aQeJJKHFD5b5Kmj3s52VYEGMYLsyi2GUK/06oEU+K3ditUM4bBwGbazcDiUX+ZufQ==",
+  "dgSpecHash": "45G16RO76IshWUOJQ19M667TbF6vwYUN5+0cb/mnj2KT/s92kAeSq33dZePJH53WJFIdcQVhRUna63/hhWm/bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\Restaurant.csproj",
   "expectedPackageFiles": [
@@ -148,6 +148,7 @@
     "C:\\Users\\Nutzer\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Nutzer\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Nutzer\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Nutzer\\.nuget\\packages\\stripe.net\\44.11.0\\stripe.net.44.11.0.nupkg.sha512",
     "C:\\Users\\Nutzer\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Nutzer\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Nutzer\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

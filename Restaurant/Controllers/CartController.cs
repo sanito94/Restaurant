@@ -6,6 +6,7 @@ using Restaurant.Core.Models.Cart;
 using Restaurant.Extensions;
 using Restaurant.Infrastructure.Data;
 using Restaurant.Infrastructure.Data.Models;
+using Stripe.Checkout;
 
 namespace Restaurant.Controllers
 {
@@ -191,6 +192,66 @@ namespace Restaurant.Controllers
 
             await context.SaveChangesAsync();
             return RedirectToAction("All", "Cart");
+        }
+
+        public async Task<IActionResult> CreateCheckoutSession()
+        {
+            var domain = "https://localhost:7081/";
+
+            var items = await context.Carts.Where(c => c.UserId == User.Id()).ToListAsync();
+
+            var options = new SessionCreateOptions
+            {
+
+                Mode = "payment",
+                SuccessUrl = domain + $"Cart/OrderConfirmation",
+                CancelUrl = domain + $"Cart/All",
+                LineItems = new List<SessionLineItemOptions>(),
+            };
+
+            foreach (var item in items)
+            {
+                var sessionListItem = new SessionLineItemOptions
+                {
+                    PriceData = new SessionLineItemPriceDataOptions
+                    {
+                        UnitAmount = (long)(item.Price * 100),
+                        Currency = "eur",
+                        ProductData = new SessionLineItemPriceDataProductDataOptions
+                        {
+                            Name = item.ItemName.ToString(),
+                        }
+                    },
+                    Quantity = item.Amount
+                };
+                options.LineItems.Add(sessionListItem);
+            }
+
+            var service = new SessionService();
+            var session = service.Create(options);
+
+            TempData["Session"] = session.Id;
+
+            Response.Headers.Add("Location", session.Url);
+
+            return new StatusCodeResult(303);
+        }
+
+        public IActionResult Success()
+        {
+            return View();
+        }
+
+        public IActionResult OrderConfirmation()
+        {
+            var service = new SessionService();
+            Session session = service.Get(TempData["Session"].ToString());
+
+            if (session.PaymentStatus == "paid")
+            {
+                return RedirectToAction(nameof(Success));
+            }
+            return RedirectToAction(nameof(All));
         }
     }
 }
