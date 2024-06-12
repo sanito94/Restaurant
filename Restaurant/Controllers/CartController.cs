@@ -200,6 +200,11 @@ namespace Restaurant.Controllers
 
             var items = await context.Carts.Where(c => c.UserId == User.Id()).ToListAsync();
 
+            if (items.Count() == 0)
+            {
+                return RedirectToAction("Menu", "Menu");
+            }
+
             var options = new SessionCreateOptions
             {
 
