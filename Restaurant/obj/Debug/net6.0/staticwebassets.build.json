@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T0OXOt0OB7rnDH5mj155ntOq9NNq0KbHNz2dDzuRumw=",
+  "Hash": "2h96mR24tlG6wUg9Jnvs1G5O6N96+He3IpWfgpt1NHo=",
   "Source": "Restaurant",
   "BasePath": "_content/Restaurant",
   "Mode": "Default",
@@ -10011,6 +10011,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\stats-bg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\wwwroot\\assets\\img\\success.png",
+      "SourceId": "Restaurant",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\wwwroot\\",
+      "BasePath": "_content/Restaurant",
+      "RelativePath": "assets/img/success.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\success.png"
     },
     {
       "Identity": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\wwwroot\\assets\\img\\team-shape.svg",

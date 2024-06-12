@@ -2109,6 +2109,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\stats-bg.jpg"
     },
     {
+      "Id": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\wwwroot\\assets\\img\\success.png",
+      "PackagePath": "staticwebassets\\assets\\img\\success.png"
+    },
+    {
       "Id": "C:\\Users\\Nutzer\\Desktop\\Test\\Restaurant\\wwwroot\\assets\\img\\team-shape.svg",
       "PackagePath": "staticwebassets\\assets\\img\\team-shape.svg"
     },
