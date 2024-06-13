@@ -2,14 +2,14 @@
 
 namespace Restaurant.Controllers
 {
-    public class ErrorController : Controller
+    public class SuccessController : Controller
     {
-        public IActionResult ContactFormError()
+        public IActionResult SuccessContactForm()
         {
             return View();
         }
 
-        public IActionResult BookATableFormError()
+        public IActionResult BookATableForm()
         {
             return View();
         }

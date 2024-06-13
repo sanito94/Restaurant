@@ -76,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Error/BookATableFormError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcQm9va0FUYWJsZUZvcm1FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Error/ContactFormError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcQ29udGFjdEZvcm1FcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -130,6 +134,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Success/BookATableForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjY2Vzc1xCb29rQVRhYmxlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nutzer/Desktop/Test/Restaurant/Views/Success/SuccessContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VjY2Vzc1xTdWNjZXNzQ29udGFjdEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nutzer/Desktop/Test/Restaurant/Views/_ViewImports.cshtml]

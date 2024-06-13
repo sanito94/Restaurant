@@ -64,7 +64,7 @@ namespace Restaurant.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("ContactFormError", "Error");
+                return RedirectToAction("BookATableFormError", "Error");
             }
 
             BookATable table = new BookATable() 
@@ -80,7 +80,7 @@ namespace Restaurant.Controllers
             await context.BookATables.AddAsync(table);
             await context.SaveChangesAsync();
 
-            return View(model);
+            return RedirectToAction("BookATableForm", "Success");
         }
 
         public IActionResult Contact()
@@ -108,6 +108,7 @@ namespace Restaurant.Controllers
                 PhoneNumber = model.PhoneNumber,
             };
 
+            
             string fromMail = "maskata1994@gmail.com";
             string fromPassword = "rnfa pook vlsc lelr";
 
@@ -138,7 +139,7 @@ namespace Restaurant.Controllers
             await context.Contacts.AddAsync(sender);
             await context.SaveChangesAsync();
 
-            return View(model);
+            return RedirectToAction("SuccessContactForm", "Success");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -24,13 +24,13 @@ namespace Restaurant.Infrastructure.Constants
         public const int SenderEmailMinLength = 5;
 
         public const int SenderNameMaxLength = 50;
-        public const int SenderNameMinLength = 5;
+        public const int SenderNameMinLength = 3;
 
         public const int SubjectMaxLength = 30;
-        public const int SubjectMinLength = 2;
+        public const int SubjectMinLength = 1;
 
         public const int MessageMaxLength = 250;
-        public const int MessageMinLength = 10;
+        public const int MessageMinLength = 1;
 
         public const int PhoneNumberMaxLength = 250;
         public const int PhoneNumberMinLength = 9;
