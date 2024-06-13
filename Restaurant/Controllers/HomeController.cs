@@ -9,6 +9,7 @@ using Restaurant.Infrastructure.Data;
 using Restaurant.Core.Services;
 using Restaurant.Core.Models.Menu;
 using Restaurant.Core.Contracts;
+using Restaurant.Core.Models.BookATable;
 
 namespace Restaurant.Controllers
 {
@@ -53,7 +54,33 @@ namespace Restaurant.Controllers
 
         public IActionResult BookTable()
         {
-            return View();
+            var model = new BookATableViewModel();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BookTable(BookATableViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("ContactFormError", "Error");
+            }
+
+            BookATable table = new BookATable() 
+            {
+                Name = model.Name,
+                Email= model.Email,
+                PhoneNumber = model.PhoneNumber,
+                Day = model.Day,
+                Hour = model.Hour,
+                NumberOfPeople = model.NumberOfPeople,
+            };
+
+            await context.BookATables.AddAsync(table);
+            await context.SaveChangesAsync();
+
+            return View(model);
         }
 
         public IActionResult Contact()

@@ -24,6 +24,5 @@ namespace Restaurant.Infrastructure.Data.Models
         [Required]
         public int NumberOfPeople { get; set; }
 
-        public string? Message { get; set; }
     }
 }

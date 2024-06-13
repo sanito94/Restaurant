@@ -1,4 +1,5 @@
-﻿@{
+﻿@model BookATableViewModel
+@{
     var year = DateTime.Now.Year;
     var nextYear = DateTime.Now.Year + 1;
     var month = DateTime.Now.Month.ToString().PadLeft(2, '0');
@@ -23,29 +24,32 @@
                     <div class="col-lg-4 reservation-img" style="background-image: url('/assets/img/reservation.jpg');"></div>
 
                     <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-                        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+                <form asp-action="BookTable" asp-controller="Home" method="post">
                             <div class="row gy-4">
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                                    <input asp-for="@Model.Name" class="form-control" aria-required="true" placeholder="Name:"/>
+                                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                                    <input asp-for="@Model.Email" class="form-control" aria-required="true" placeholder="Email:"/>
+                                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                                    <input asp-for="@Model.PhoneNumber" class="form-control" aria-required="true" placeholder="Phone Number:"/>
+                                    <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="date" value="@year-@month-@day" min="@year-@month-@day" max="@nextYear-@month-@day" class="form-control" name="date" id="date" placeholder="Date" required="">
+                                    <input asp-for="@Model.Day" type="date" value="@year-@month-@day" min="@year-@month-@day" max="@nextYear-@month-@day" class="form-control" placeholder="Date" >
+                                    <span asp-validation-for="@Model.Day" class="text-danger"></span>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="time" value="@hour:@minute" class="form-control" name="time" id="time" placeholder="Time" required="">
+                                    <input asp-for="@Model.Hour" type="time" value="@hour:@minute" class="form-control"  placeholder="Time">
+                                    <span asp-validation-for="@Model.Hour" class="text-danger"></span>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <input type="number" class="form-control" name="people" id="people" placeholder="Number of people" required="">
+                                    <input asp-for="@Model.NumberOfPeople" type="number" class="form-control" placeholder="Number of people:">
+                                    <span asp-validation-for="@Model.NumberOfPeople" class="text-danger"></span>
                                 </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
                             </div>
                            
                             <div class="text-center"><button type="submit">Book a Table</button></div>
